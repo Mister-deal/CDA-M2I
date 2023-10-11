@@ -12,8 +12,11 @@ function App() {
     <div className="App">
       <h1>Name your friend/list</h1>
       <MyContext.Provider value={myState}>
+        <br/>
       <FormComponent />
+      <br/>
       <CardsComponent />
+      <br/>
       </MyContext.Provider>
     </div>
   );
