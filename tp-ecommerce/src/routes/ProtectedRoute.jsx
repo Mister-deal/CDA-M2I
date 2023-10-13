@@ -2,9 +2,17 @@ import { Navigate } from 'react-router-dom'
 
 const ProtectedRoute = (props) => {
 
-    const testUser = false
+    const authCheck = () => {
+        const role = localStorage.getItem("role");
+        const password = localStorage.getItem("password");
+        if(role === "Admin" && password === "1234"){
+            return true
+        }else{
+            return false
+        }
+    }
 
-    if(testUser){
+    if(authCheck()){
         return (<>
             {props.children}
         </>)

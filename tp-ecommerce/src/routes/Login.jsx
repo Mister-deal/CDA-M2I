@@ -7,25 +7,18 @@ const Login = () => {
     const roleValue = useRef();
     const navigate = useNavigate();
     const passwordValue = useRef();
-    // const setStorage = () => {
-    //     localStorage.setItem("admin", JSON.stringify({role: roleValue, password: passwordValue}))
-    //     navigate('/Add')
-    // }
 
     const handleSubmit = (e) => {
-        e.preventDefault()
-        console.log(roleValue.current.value);
-        if(roleValue.current.value === "Admin" && passwordValue.current.value === 1234 ){
-            const newLogin = {
-                role: roleValue,
-                password: passwordValue
-            };
-            console.log(newLogin.role);
-            console.log(newLogin.password);
-        }else{
-            alert('vous ne remplissez pas entièrement le formulaire')
-        }
-    }
+        e.preventDefault();
+        const role = roleValue.current.value;
+        const password = passwordValue.current.value;
+        console.log(role);
+        console.log(password);
+        localStorage.setItem("role", role);
+        localStorage.setItem("password", password);
+        navigate("/Add");
+    };
+    
     return(
         <form onSubmit={handleSubmit}>
             <div class="form-example">
