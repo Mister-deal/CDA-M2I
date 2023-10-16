@@ -1,0 +1,34 @@
+{
+  "articles": [
+    {
+      "nom": "tagliatelle",
+      "description": "pâte épaisse originaire d'italie du nord.",
+      "prix": 1.5,
+      "id": 1
+    },
+    {
+      "nom": "Eau La fontaine Dorée",
+      "description": "Eau provenant de la fontaine dorée, source non loin d'Evian; prix à la bouteille",
+      "prix": 0.75,
+      "id": 2
+    },
+    {
+      "nom": "oeufs",
+      "description": "Boite d'une douzaine d'oeufs, qualité bio",
+      "prix": 3.75,
+      "id": 3
+    },
+    {
+      "nom": "blabla",
+      "description": "blabli",
+      "prix": "15",
+      "id": 4
+    },
+    {
+      "nom": "blibli",
+      "description": "bloublou",
+      "prix": "3",
+      "id": 5
+    }
+  ]
+}
