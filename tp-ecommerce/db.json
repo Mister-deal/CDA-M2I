@@ -29,6 +29,12 @@
       "description": "bloublou",
       "prix": "3",
       "id": 5
+    },
+    {
+      "nom": "gfgdgdfg",
+      "description": "sgsdgdgd",
+      "prix": "1",
+      "id": 6
     }
   ]
 }
