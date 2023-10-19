@@ -1,33 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect, useState } from 'react'
 import './App.css'
+import { useDispatch } from 'react-redux'
+import SignForm from './components/auth/SignForm'
+import { useSelector } from 'react-redux'
+import Modal from './components/shared/Modal'
+import { fetchAlbums, setFormMode } from './components/albums/albumsSlice'
+import AddAlbumForm from './components/albums/AddAlbumForm'
+import NavBar from './components/shared/NavBar'
+import AlbumDisplay from './components/albums/AlbumDisplay'
+import EditAlbumForm from './components/albums/EditAlbumForm'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const dispatch = useDispatch()
+  const albums = useSelector(state => state.albums.albums)
+  const formMode = useSelector(state => state.albums.formMode)
+  const user = useSelector(state => state.auth.user)
 
+  useEffect(() => {
+    dispatch(fetchAlbums())
+    console.log(albums);
+  }, [])
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    {formMode === "add" && <Modal onClose={() => dispatch(setFormMode(""))}><AddAlbumForm/></Modal>}
+      {formMode === "edit" && <Modal onClose={() => dispatch(setFormMode(""))}><EditAlbumForm/></Modal>}
+      {/* {formMode === "delete" && <Modal onClose={() => dispatch(setFormMode(""))}><DeleteRecipeForm/></Modal>} */}
+      <header>
+        <NavBar />
+      </header>
+      <main className='container'>
+        <div className='row my-3'>
+          <div className='col bg-dark rounded text-light p-3'>
+            <div className='d-flex justify-content-between align-items-center'>
+              <h3>Album List</h3>
+              {user && <button className='btn btn-success' onClick={() => dispatch(setFormMode("add"))}>Add</button>}
+            </div>
+            <hr />
+            {
+              albums.length === 0 ? (
+                <p>Il n'y a pas d'albums présents</p>
+              ) : albums.map(album => <AlbumDisplay key={album.id} album={album} />)
+            }
+          </div>
+        </div>
+      </main>
     </>
   )
 }
