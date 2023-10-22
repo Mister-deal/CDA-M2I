@@ -4,6 +4,27 @@ import { NavLink, Outlet, Link  } from "react-router-dom"
 
 const Home = () => {
     const[articles, setArticles] = useState([])
+    
+
+    const addArticle = (obj) => {
+        const articleList = JSON.parse(localStorage.getItem("cart"));
+        if (!articleList) {
+          obj.quantity = 1;
+          localStorage.setItem("cart", JSON.stringify([obj]));
+        } else if (articleList.find((a) => obj.id === a.id)) {
+          articleList.forEach((element) => {
+            if (element.id === obj.id) {
+              ++element.quantity;
+            }
+          });
+          localStorage.setItem("cart", JSON.stringify(articleList));
+        } else {
+          obj.quantity = 1;
+          localStorage.setItem("cart", JSON.stringify([...articleList, obj]));
+        }
+      };
+
+
 
     useEffect(() =>{
         axios.get(`http://localhost:5000/articles`)
