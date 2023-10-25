@@ -9,6 +9,7 @@ import AddAlbumForm from './components/albums/AddAlbumForm'
 import NavBar from './components/shared/NavBar'
 import AlbumDisplay from './components/albums/AlbumDisplay'
 import EditAlbumForm from './components/albums/EditAlbumForm'
+import DeleteAlbumForm from './components/albums/DeleteAlbumForm'
 
 function App() {
   const dispatch = useDispatch()
@@ -24,7 +25,7 @@ function App() {
     <>
     {formMode === "add" && <Modal onClose={() => dispatch(setFormMode(""))}><AddAlbumForm/></Modal>}
       {formMode === "edit" && <Modal onClose={() => dispatch(setFormMode(""))}><EditAlbumForm/></Modal>}
-      {/* {formMode === "delete" && <Modal onClose={() => dispatch(setFormMode(""))}><DeleteRecipeForm/></Modal>} */}
+      {formMode === "delete" && <Modal onClose={() => dispatch(setFormMode(""))}><DeleteAlbumForm/></Modal>}
       <header>
         <NavBar />
       </header>

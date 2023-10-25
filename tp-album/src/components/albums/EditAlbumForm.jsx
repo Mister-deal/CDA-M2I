@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useEffect, useRef } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { editAlbum, postAlbum, setFormMode } from "./albumsSlice"
 
@@ -14,6 +14,16 @@ const EditAlbumForm = () => {
     const artistRef = useRef()
     const scoreRef = useRef()
     const urlRef = useRef()
+
+    useEffect(() => {
+        if(selectedAlbum){
+            titleRef.current.value = selectedAlbum.title
+            dateRef.current.value = selectedAlbum.date
+            artistRef.current.value = selectedAlbum.artist
+            scoreRef.current.value = selectedAlbum.score
+            urlRef.current.value = selectedAlbum.url
+        }
+    })
 
     const submitFormHandler = async (e) =>{
         e.preventDefault()
