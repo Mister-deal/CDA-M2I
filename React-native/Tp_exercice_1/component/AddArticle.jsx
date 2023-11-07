@@ -28,6 +28,7 @@ const AddArticle = () => {
         <View>
             <Button title="Add Article here" onPress={OpenModal}/>
             <ModalView visible={modalVisible} CloseModal={CloseModal}></ModalView>
+            
         </View>
     )
 }

@@ -20,13 +20,14 @@ const ModalView = (props) => {
     return(
         <Modal visible={props.visible} style={styles.Modal}>
             <View>
-                <Text style={styles.monTitre}>Liste Courses:</Text>
-                <TextInput onChangeText={text} value={textInput} />
+                <Text style={styles.monTitre}>Eshop:</Text>
+                <Image source={require('../img/shop.png')} style={styles.image} />
+                <TextInput style={styles.input} onChangeText={text} value={textInput} />
                 <Button title="confirm here" onPress={addElementToListing}/>
                 <FlatList data={listing} renderItem={(itemData) => {
                     return (
-                        <View>
-                            <Text>{itemData.item}</Text>
+                        <View style={styles.listDiv}>
+                            <Text style={styles.list}>{itemData.item}</Text>
                         </View>
                     )
                 }} keyExtractor={(item, index) => {
@@ -45,10 +46,30 @@ const styles =  StyleSheet.create({
         alignItems: 'flex-start',
         padding: 10,
     },
+    input: {
+        flex: 0.2,
+        borderWidth: 5,
+        borderTopWidth: 10,
+        borderColor: "red"
+    },
     monTitre: {
-        fontSize: 30,
-        color: "red",
-        alignSelf: "center"
+        fontSize: 40,
+        color: "black",
+        alignSelf: "center",
+    },
+    image: {
+        alignSelf: "center",
+        width: 120,
+        height: 120
+    },
+    listDiv: {
+        backgroundColor: "aquamarine",
+        margin: 10
+    },
+    list: {
+        color: "white",
+        alignSelf: "center",
+        fontSize: 20
     }
 })
 
