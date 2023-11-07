@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const { Modal, View, Text, Image, Button, StyleSheet, TextInput, FlatList, ViewBase } = require("react-native")
+const { Modal, View, Text, Image, Button, StyleSheet, TextInput, FlatList, ViewBase, Pressable } = require("react-native")
 
 
 
@@ -16,18 +16,27 @@ const ModalView = (props) => {
 
     const addElementToListing = () =>{
         setListing([...listing, textInput])
+        console.log(listing, setListing);
+    }
+
+    const deleteElementToListing = (itemId) =>{
+        const updatedData = listing.filter(itemData => itemData.id != itemId);
+        setListing(updatedData);
+        console.log(listing, setListing, updatedData);
     }
     return(
         <Modal visible={props.visible} style={styles.Modal}>
             <View>
-                <Text style={styles.monTitre}>Eshop:</Text>
+                <Text style={styles.monTitre}>Eshop</Text>
                 <Image source={require('../img/shop.png')} style={styles.image} />
                 <TextInput style={styles.input} onChangeText={text} value={textInput} />
                 <Button title="confirm here" onPress={addElementToListing}/>
                 <FlatList data={listing} renderItem={(itemData) => {
                     return (
                         <View style={styles.listDiv}>
-                            <Text style={styles.list}>{itemData.item}</Text>
+                            <Pressable onPress={() => deleteElementToListing(itemData.id)}>
+                                <Text style={styles.list}>{itemData.item}</Text>
+                            </Pressable>
                         </View>
                     )
                 }} keyExtractor={(item, index) => {
@@ -48,6 +57,9 @@ const styles =  StyleSheet.create({
     },
     input: {
         flex: 0.2,
+        height: 25,
+        margin: 10,
+        padding: 10,
         borderWidth: 5,
         borderTopWidth: 10,
         borderColor: "red"
@@ -67,7 +79,7 @@ const styles =  StyleSheet.create({
         margin: 10
     },
     list: {
-        color: "white",
+        color: "black",
         alignSelf: "center",
         fontSize: 20
     }
