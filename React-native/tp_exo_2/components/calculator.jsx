@@ -73,64 +73,64 @@ const Calculator = () => {
       <Text style={styles.display}>{input}</Text>
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.buttonCalc} onPress={handleClear}>
-          <Text>AC</Text>
+          <Text style={styles.textCalc}>AC</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.buttonCalc} onPress={handleClear}>
-          <Text>^</Text>
+          <Text style={styles.textCalc}>^</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.buttonCalc} onPress={handlePercentage}>
-          <Text>%</Text>
+          <Text style={styles.textCalc}>%</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.buttonCalc} onPress={handleDivision}>
-          <Text>/</Text>
+          <Text style={styles.textCalc}>/</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => handlePress('7')}>
-          <Text>7</Text>
+          <Text style={styles.text}>7</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => handlePress('8')}>
-          <Text>8</Text>
+          <Text style={styles.text}>8</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => handlePress('9')}>
-          <Text>9</Text>
+          <Text style={styles.text}>9</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.buttonCalc} onPress={handleMultiplication}>
-          <Text>*</Text>
+          <Text style={styles.textCalc}>*</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => handlePress('4')}>
-          <Text>4</Text>
+          <Text style={styles.text}>4</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => handlePress('5')}>
-          <Text>5</Text>
+          <Text style={styles.text}>5</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => handlePress('6')}>
-          <Text>6</Text>
+          <Text style={styles.text}>6</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.buttonCalc} onPress={handleSubstraction}>
-          <Text>-</Text>
+          <Text style={styles.textCalc}>-</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => handlePress('1')}>
-          <Text>1</Text>
+          <Text style={styles.text}>1</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => handlePress('2')}>
-          <Text>2</Text>
+          <Text style={styles.text}>2</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => handlePress('3')}>
-          <Text>3</Text>
+          <Text style={styles.text}>3</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.buttonCalc} onPress={handleAddition}>
-          <Text>+</Text>
+          <Text style={styles.textCalc}>+</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={handleDot}>
-          <Text>.</Text>
+          <Text style={styles.text}>.</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={() => handlePress('0')}>
-          <Text>0</Text>
+          <Text style={styles.text}>0</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button} onPress={handleDelete}>
-          <Text>del</Text>
+          <Text style={styles.text}>del</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.buttonCalc} onPress={handleCalculate}>
-          <Text>=</Text>
+          <Text style={styles.textCalc}>=</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -177,6 +177,16 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 20,
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
+  },
+  text: {
+    fontSize: 35,
+    fontWeight: "bold",
+    color: "black"
+  },
+  textCalc: {
+    fontSize: 35,
+    fontWeight: "bold",
+    color: "white"
   }
 });
 
