@@ -24,8 +24,8 @@ public class Main {
         // Structure2.getBoucleFor();
        // Structure2.getBreakAndContinue();
         //Exo3.solutionExo58();
-    //    ChaineCharactere.getMethodString();
-       // ChaineCharactere.getComparaisonString();
+       ChaineCharactere.getMethodString();
+       ChaineCharactere.getComparaisonString();
         ChaineCharactere.getFormatString();
     }
 }
