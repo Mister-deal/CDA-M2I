@@ -1,20 +1,25 @@
 package org.example;
 
-import org.example.exercice1.Exo1;
-import org.example.exo_Condition.Exo2;
+
+import org.example.exercices.Exo1;
+import org.example.exercices.Exo3;
+import org.example.operator.Operator;
+import org.example.readFromConsole.ReadFromConsole;
+import org.example.structure.Structure;
+import org.example.structure.Structure2;
+import org.example.variable.Variable;
 
 public class Main {
     public static void main(String[] args) {
 
-            //Exo1.getExo1();
-            //Exo2.getHello();
-        //Exo2.solutionExo35();
-        //Exo2.solutionExo36();
-        //Exo2.solutionExo37();
-        //Exo2.solutionExo34();
-        //Exo2.solutionExo51();
-        //Exo2.solutionExo52();
-        Exo2.solutionExo54();
-        //Exo2.solutionExo55();
+        //Variable.getVariable();
+       // Operator.getExpression();
+       // Operator.getOperatorAndComparaison();
+        // Structure.getSwitch();
+       // ReadFromConsole.getReadWrite();
+       // Exo1.solutionExo33();
+        // Structure2.getBoucleFor();
+       // Structure2.getBreakAndContinue();
+        Exo3.solutionExo58();
     }
 }
