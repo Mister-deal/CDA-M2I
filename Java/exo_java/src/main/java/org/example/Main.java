@@ -3,6 +3,7 @@ package org.example;
 
 import org.example.exercices.Exo1;
 import org.example.exercices.Exo3;
+import org.example.exercices.Exo4;
 import org.example.operator.Operator;
 import org.example.readFromConsole.ReadFromConsole;
 import org.example.structure.Structure;
@@ -20,6 +21,10 @@ public class Main {
        // Exo1.solutionExo33();
         // Structure2.getBoucleFor();
        // Structure2.getBreakAndContinue();
-        Exo3.solutionExo58();
+        //Exo3.solutionExo58();
+        //Exo4.ExoTab51();
+        //Exo4.exoTab52();
+        //Exo4.exoTab55();
+        Exo4.exoTab56();
     }
 }
