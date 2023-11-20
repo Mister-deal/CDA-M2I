@@ -6,8 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="exo_java" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="string" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
