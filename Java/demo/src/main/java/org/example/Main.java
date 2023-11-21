@@ -1,10 +1,7 @@
 package org.example;
 
 
-import org.example.exercices.Exo1;
-import org.example.exercices.Exo3;
-import org.example.exercices.Exo4;
-import org.example.exercices.Exo5;
+import org.example.exercices.*;
 import org.example.exercices.tpVendredi.Tableau2;
 import org.example.operator.Operator;
 import org.example.readFromConsole.ReadFromConsole;
@@ -37,6 +34,9 @@ public class Main {
         //Exo4.exoCountingWord();
         //Exo4.anagram();
         //Exo5.matrice1();
-        Exo5.matrice2();
+        //Exo5.matrice2();
+        //Exo6.exo1();
+        Exo6.exo2();
+        //Exo6.exo3();
     }
 }
