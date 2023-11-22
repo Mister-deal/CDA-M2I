@@ -4,6 +4,7 @@ package org.example;
 import org.example.exercices.*;
 import org.example.exercices.tpVendredi.Tableau2;
 import org.example.operator.Operator;
+import org.example.poo.Product;
 import org.example.readFromConsole.ReadFromConsole;
 import org.example.string.ChaineCharactere;
 import org.example.structure.Structure;
@@ -36,7 +37,18 @@ public class Main {
         //Exo5.matrice1();
         //Exo5.matrice2();
         //Exo6.exo1();
-        Exo6.exo2();
+        //Exo6.exo2();
         //Exo6.exo3();
+        //Exo6.exoFactorielle();
+
+        Product p = new Product();
+        p.setId(10);
+        p.setName("Iphone");
+        System.out.println(p);
+        Product p2 = new Product(10, "Table");
+        System.out.println(p2);
+        System.out.println(p2.getName());
+        p2.setId(15);
+        System.out.println(p2);
     }
 }

@@ -77,4 +77,21 @@ public class Exo6 {
     public static int getWords(String data){
         return data.split("\\s+").length;
     }
+
+    public static void exoFactorielle(){
+        int number = 5;
+        long factorial = calculateFactorial(number);
+        System.out.println("Factorial of " + number + " = " + factorial);
+    }
+
+    // Méthode récursive pour calculer le factoriel
+    static long calculateFactorial(int n) {
+        // Cas de base : factorial(0) = 1
+        if (n == 0 || n == 1) {
+            return 1;
+        } else {
+            // Appel récursif : factorial(n) = n * factorial(n-1)
+            return n * calculateFactorial(n - 1);
+        }
+    }
 }
