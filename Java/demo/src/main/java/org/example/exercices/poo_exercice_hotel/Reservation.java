@@ -18,7 +18,7 @@ public class Reservation {
         this.statut = "on hold";
     }
     public void cancelReservation(){
-        this.statut = "canceled";
+        this.statut = "cancelled";
         this.chambre.setStatus("available");
     }
 
