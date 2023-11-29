@@ -4,34 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cef2beaf-a722-4745-9a7f-2b583131778d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Java.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exo_java/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exo_java/main/java/org/example/array/Array.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exo_java/main/java/org/example/exercices/Exo1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exo_java/main/java/org/example/exercices/Exo2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exo_java/main/java/org/example/exercices/Exo3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exo_java/main/java/org/example/exercices/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exo_java/main/java/org/example/exercices/tpVendredi/Tableau1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exo_java/main/java/org/example/exercices/tpVendredi/Tableau2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exo_java/main/java/org/example/exercices/tpVendredi/Tableau3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exo_java/main/java/org/example/model/Maison.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exo_java/main/java/org/example/operator/Operator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exo_java/main/java/org/example/readFromConsole/ReadFromConsole.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exo_java/main/java/org/example/string/ChaineCharactere.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exo_java/main/java/org/example/structure/Structure.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exo_java/main/java/org/example/structure/Structure2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exo_java/main/java/org/example/variable/Variable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="cef2beaf-a722-4745-9a7f-2b583131778d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +39,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "C:/Users/Administrateur/Desktop/Dossier exo et cours maxime M2i/CDA-M2I/Java/demo",
+    "last_opened_file_path": "C:/Users/Administrateur/Desktop/Dossier exo et cours maxime M2i/CDA_LILLE_17_JUILLET/Java",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -103,6 +76,7 @@
       <workItem from="1700493077004" duration="52000" />
       <workItem from="1700493155731" duration="270000" />
       <workItem from="1700493434522" duration="129000" />
+      <workItem from="1701247399967" duration="94000" />
     </task>
     <servers />
   </component>
