@@ -1,4 +1,4 @@
-package org.example;
+package org.example.demo_lombok;
 
 
 import com.github.lalyos.jfiglet.FigletFont;
@@ -30,8 +30,7 @@ public class Main {
 
         System.out.println(person1.equals(person));
 
-        Maison maison = new Maison(4):
-        maison.se
+        Maison maison = new Maison(4);
 
 
     }
