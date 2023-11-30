@@ -36,4 +36,14 @@ public class Lot extends Article{
     public void setRemise(double remise) {
         this.remise = remise;
     }
+
+    @Override
+    public String getName() {
+        return null;
+    }
+
+    @Override
+    public double getPrice() {
+        return 0;
+    }
 }

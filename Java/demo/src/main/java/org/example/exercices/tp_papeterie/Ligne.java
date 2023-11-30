@@ -18,8 +18,7 @@ public class Ligne{
         );
     }
     public double getPrixTotal() {
-        // Calculez le prix total en fonction de la quantité et du prix unitaire de l'article
-        //return quantite * this.articles;
+        return quantite;
     }
 
     public Article getArticles() {
