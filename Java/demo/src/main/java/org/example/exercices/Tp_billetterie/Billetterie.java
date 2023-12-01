@@ -3,9 +3,9 @@ package org.example.exercices.Tp_billetterie;
 import java.util.Scanner;
 
 public class Billetterie {
-    public static void billetterie(String[] args){
+    public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        
+
         int choix;
         do {
             System.out.println("1. Gérer les lieux");
@@ -22,7 +22,7 @@ public class Billetterie {
 
             switch (choix) {
                 case 1:
-
+                    
                     break;
                 case 2:
 
