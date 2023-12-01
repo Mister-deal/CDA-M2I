@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cef2beaf-a722-4745-9a7f-2b583131778d" name="Changes" comment="" />
+    <list default="true" id="cef2beaf-a722-4745-9a7f-2b583131778d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,19 +41,22 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "11",
-    "last_opened_file_path": "C:/Users/Administrateur/Desktop/Dossier exo et cours maxime M2i/CDA_LILLE_17_JUILLET/Java",
+    "last_opened_file_path": "C:/Users/max-9/OneDrive/Bureau/cours et exercices CDA/CDA-M2I/Java/demo",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "onboarding.tips.debug.path": "C:/Users/Administrateur/Desktop/Dossier exo et cours maxime M2i/CDA-M2I/Java/exo_java/src/main/java/org/string/src/main/java/org/example/Main.java",
+    "settings.editor.selected.configurable": "preferences.pathVariables",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
-      <module name="demo" />
+      <module name="Java" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.*" />
@@ -77,6 +82,7 @@
       <workItem from="1700493155731" duration="270000" />
       <workItem from="1700493434522" duration="129000" />
       <workItem from="1701247399967" duration="94000" />
+      <workItem from="1701425158220" duration="272000" />
     </task>
     <servers />
   </component>
