@@ -1,5 +1,6 @@
 package org.example.exercices.Builder;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Pizza {
@@ -24,7 +25,7 @@ public class Pizza {
         private int taille;
         private String pate;
         private String fromage;
-        private List<String> garnitures;
+        private List<String> garnitures = new ArrayList<>();
         private String sauce;
 
         public Builder taille(int taille) {
@@ -42,8 +43,8 @@ public class Pizza {
             return this;
         }
 
-        public Builder garnitures(List<String> garnitures) {
-            this.garnitures = garnitures;
+        public Builder garnitures(String garniture) {
+            this.garnitures.add(garniture);
             return this;
         }
 
