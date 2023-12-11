@@ -16,8 +16,9 @@ CREATE TABLE IF NOT EXISTS compte_role(
 compte_id INT NOT NULL,
 role_id INT NOT NULL,
 date_ajout DATETIME,
-CONSTRAINT fk_compte_id FOREIGN KEY (compte_id) REFERENCES compte(compte_id),
-CONSTRAINT fk_role_id FOREIGN KEY (role_id) REFERENCES role(role_id)
+PRIMARY KEY(compte_id, role_id),
+FOREIGN KEY (compte_id) REFERENCES compte(compte_id),
+FOREIGN KEY (role_id) REFERENCES role(role_id)
 );
 
 
