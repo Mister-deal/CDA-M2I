@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc2fbcd2-2911-48a8-992f-68c0c036702e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../SQL/demos/1_ddl.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../SQL/demos/1_ddl.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,9 +12,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2Zhwy9dfUPKwfBwi5V6RrWko5fa" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -26,7 +26,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Administrateur/Desktop/Dossier exo et cours maxime M2i/CDA-M2I/JDBC",
+    "last_opened_file_path": "C:/Users/Administrateur/Desktop/Dossier exo et cours maxime M2i/CDA-M2I/JDBC/JDBC",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -39,6 +39,10 @@
       <option name="presentableId" value="Default" />
       <updated>1702887870209</updated>
       <workItem from="1702887871213" duration="188000" />
+      <workItem from="1702897731535" duration="38000" />
+      <workItem from="1702897787693" duration="91000" />
+      <workItem from="1702897929703" duration="26000" />
+      <workItem from="1702897963699" duration="58000" />
     </task>
     <servers />
   </component>
