@@ -70,6 +70,9 @@ ALTER TABLE service
 -- Modifier la colonne en type DATE
 ALTER TABLE service
 	MODIFY COLUMN date_modification DATE;
+    
+ALTER TABLE service
+	ADD COLUMN date_modification DATETIME;
 	
 
 
