@@ -6,6 +6,7 @@ import org.example.EXO_2.utils.DatabaseManager;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
 
 public class ClientService {
     private ClientDAO clientDAO;
@@ -27,6 +28,21 @@ public class ClientService {
         client.setTelephone(telephone);
         try {
             return clientDAO.saveClient(client);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public Client getPerson(int id){
+        try {
+            return clientDAO.getIdClient(id);
+        }catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public List<Client> getAllClients(){
+        try{
+            return clientDAO.getAllClients();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

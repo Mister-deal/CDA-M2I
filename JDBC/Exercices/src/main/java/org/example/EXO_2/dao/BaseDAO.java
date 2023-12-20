@@ -24,5 +24,6 @@ public abstract class BaseDAO<T>{
 
     public abstract T getIdClient(int id) throws SQLException;
     public abstract List<T> getAllFromAccount() throws SQLException;
+    public abstract List<T> getAllClients() throws  SQLException;
 
 }

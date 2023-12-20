@@ -42,4 +42,9 @@ public class OperationDAO extends BaseDAO<Operation> {
         return null;
     }
 
+    @Override
+    public List<Operation> getAllClients() throws SQLException {
+        return null;
+    }
+
 }

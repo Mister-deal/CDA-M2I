@@ -5,6 +5,7 @@ import org.example.EXO_2.models.Client;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ClientDAO extends BaseDAO<Client> {
@@ -44,7 +45,18 @@ public class ClientDAO extends BaseDAO<Client> {
 
     @Override
     public Client getIdClient(int id) throws SQLException {
-        return null;
+        Client client = null;
+        request = "SELECT * FROM client WHERE identifiant = ?";
+        statement = _connection.prepareStatement(request);
+        statement.setInt(1,id);
+        resultSet = statement.executeQuery();
+        if(resultSet.next()){
+            client = new Client(resultSet.getInt("identifiant"),
+                    resultSet.getString("first_name"),
+                    resultSet.getString("last_name"),
+                    resultSet.getString("telephone"));
+        }
+        return client;
     }
 
     @Override
@@ -52,6 +64,21 @@ public class ClientDAO extends BaseDAO<Client> {
         return null;
     }
 
+    @Override
+    public List<Client> getAllClients() throws SQLException {
+        List<Client> result = new ArrayList<>();
+        request = "SELECT * FROM client";
+        statement = _connection.prepareStatement(request);
+        resultSet = statement.executeQuery();
+        while (resultSet.next()){
+           Client client = new Client(resultSet.getInt("identifiant"),
+                    resultSet.getString("first_name"),
+                    resultSet.getString("last_name"),
+                    resultSet.getString("telephone"));
+           result.add(client);
+        }
+        return result;
+    }
 
 
 }

@@ -7,6 +7,7 @@ import java.sql.*;
 import java.util.List;
 
 public class CompteBancaireDAO extends BaseDAO<CompteBancaire> {
+    private String req;
 
     private ClientDAO clientDAO;
     public CompteBancaireDAO(Connection _connection) {
@@ -20,10 +21,14 @@ public class CompteBancaireDAO extends BaseDAO<CompteBancaire> {
 
     @Override
     public boolean saveAccount(CompteBancaire element) throws SQLException {
+        req = "SELECT * FROM client WHERE identifiant = ?";
+        statement = _connection.prepareStatement(req);
+        System.out.println(req);
         request = "INSERT INTO compteBancaire (solde, client_identifiant) VALUES(?, ?)";
         statement = _connection.prepareStatement(request, Statement.RETURN_GENERATED_KEYS);
         statement.setDouble(1, element.getSolde());
         statement.setInt(2, element.getClientId());
+        System.out.println(element.getClientId());
         int rowNb = statement.executeUpdate();
         resultSet = statement.getGeneratedKeys();
         if (resultSet.next()){
@@ -31,6 +36,7 @@ public class CompteBancaireDAO extends BaseDAO<CompteBancaire> {
         }
         return rowNb == 1;
     }
+
 
     @Override
     public boolean deposit(CompteBancaire element) throws SQLException {
@@ -54,10 +60,6 @@ public class CompteBancaireDAO extends BaseDAO<CompteBancaire> {
                 if (resultSet.next()) {
                     compteBancaire = new CompteBancaire();
                     compteBancaire.setId(resultSet.getInt("id"));
-                    compteBancaire.setSolde(resultSet.getDouble("solde"));
-                    // Autres propriétés du compte bancaire à récupérer...
-
-                    // Vous pouvez également définir le client identifiant si nécessaire
                     compteBancaire.setClientId(resultSet.getInt("client_identifiant"));
                 }
             }
@@ -69,6 +71,11 @@ public class CompteBancaireDAO extends BaseDAO<CompteBancaire> {
 
     @Override
     public List<CompteBancaire> getAllFromAccount() throws SQLException {
+        return null;
+    }
+
+    @Override
+    public List<CompteBancaire> getAllClients() throws SQLException {
         return null;
     }
 

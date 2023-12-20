@@ -17,6 +17,13 @@ public class Client {
 
     }
 
+    public Client(int identifiant, String firstName, String lastName, String telephone) {
+        this.identifiant = identifiant;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.telephone = telephone;
+    }
+
     public Client(int identifiant, String firstName, String lastName, List<CompteBancaire> comptes, String telephone) {
         this.identifiant = identifiant;
         this.firstName = firstName;

@@ -15,7 +15,7 @@ public class CompteBancaire {
 
     public CompteBancaire(int id, int clientId, double solde, Client client, List<Operation> operations) {
         this.id = id;
-        this.clientId = clientId;
+        this.clientId = client.getIdentifiant();
         this.solde = 0.0;
         this.client = client;
         this.operations = operations;
