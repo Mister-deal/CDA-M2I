@@ -25,6 +25,7 @@ public class ConsoleIHM {
             System.out.println("5. Retrait d'argent");
             System.out.println("6. Afficher solde et retrait du compte");
             System.out.println("7. Afficher tous les clients");
+            System.out.println("8. Quitter");
             System.out.print("Choix : ");
 
             int choice = scanner.nextInt();
