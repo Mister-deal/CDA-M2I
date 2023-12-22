@@ -22,7 +22,7 @@ public class Billetterie {
 
             switch (choix) {
                 case 1:
-                    
+
                     break;
                 case 2:
 
