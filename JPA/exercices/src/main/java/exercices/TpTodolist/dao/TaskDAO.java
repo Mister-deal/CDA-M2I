@@ -1,38 +1,149 @@
 package exercices.TpTodolist.dao;
 
 import exercices.TpTodolist.Models.Task;
+import exercices.TpTodolist.Models.TaskInfo;
 
-import java.sql.Connection;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
 import java.sql.SQLException;
 import java.util.List;
 
-public class TaskDAO extends BaseDAO<Task> {
-    protected TaskDAO(Connection connection) {
-        super(connection);
+public class TaskDAO extends BaseDAO {
+
+    private EntityManagerFactory entityManagerFactory;
+
+    public TaskDAO(EntityManagerFactory entityManagerFactory){
+        this.entityManagerFactory = entityManagerFactory;
+    }
+
+
+    @Override
+    public boolean add(Task task) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
+        System.out.println(task.getTaskInfo());
+        try {
+            transaction.begin();
+            entityManager.persist(task);
+            transaction.commit();
+            return true;
+        } catch (Exception e) {
+            if (transaction.isActive()) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+            return false;
+        } finally {
+            entityManager.close();
+        }
+    }
+
+
+    @Override
+    public List<Task> get() {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        List<Task> tasks = entityManager
+                .createQuery("SELECT t FROM Task t", Task.class)
+                .getResultList();
+        entityManager.close();
+        return tasks;
     }
 
     @Override
-    public boolean add(Task element) throws SQLException {
-        return false;
+    public boolean completed(Long taskId) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
+        try {
+            transaction.begin();
+            Task task = entityManager.find(Task.class, taskId);
+            if (task != null) {
+                task.setCompleted(true);
+                transaction.commit();
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception e) {
+            if (transaction.isActive()) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+            return false;
+        } finally {
+            entityManager.close();
+        }
     }
 
     @Override
-    public Task get(int id) throws SQLException {
-        return null;
+    public boolean delete(Long taskId) {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
+        try {
+            transaction.begin();
+            Task task = entityManager.find(Task.class, taskId);
+            if (task != null) {
+                entityManager.remove(task);
+                transaction.commit();
+                return true;
+            } else {
+                return false;
+            }
+        } catch (Exception e) {
+            if (transaction.isActive()) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+            return false;
+        } finally {
+            entityManager.close();
+        }
     }
 
-    @Override
-    public List<Task> get() throws SQLException {
-        return null;
+
+    public Task findTaskById(Long taskId){
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        Task task = entityManager.find(Task.class, taskId);
+        entityManager.close();
+        return task;
     }
 
-    @Override
-    public boolean completed(Task element) throws SQLException {
-        return false;
+
+    public boolean updateTask(Task task)  {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
+        try {
+            transaction.begin();
+            entityManager.merge(task);
+            transaction.commit();
+            return true;
+        } catch (Exception e) {
+            if (transaction.isActive()) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+            return false;
+        } finally {
+            entityManager.close();
+        }
     }
 
-    @Override
-    public boolean delete(Task element) throws SQLException {
-        return false;
+    public boolean updateTaskInfo(TaskInfo taskInfo)  {
+        EntityManager entityManager = entityManagerFactory.createEntityManager();
+        EntityTransaction transaction = entityManager.getTransaction();
+        try {
+            transaction.begin();
+            entityManager.merge(taskInfo);
+            transaction.commit();
+            return true;
+        } catch (Exception e) {
+            if (transaction.isActive()) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+            return false;
+        } finally {
+            entityManager.close();
+        }
     }
 }

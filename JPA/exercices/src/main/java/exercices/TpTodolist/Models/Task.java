@@ -12,6 +12,22 @@ public class Task {
     private String description;
     private boolean completed;
 
+    @OneToOne(mappedBy = "task", cascade = { CascadeType.ALL, CascadeType.PERSIST})
+    private TaskInfo taskInfo;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+
+    public TaskInfo getTaskInfo() {
+        return taskInfo;
+    }
+
+    public void setTaskInfo(TaskInfo taskInfo) {
+        this.taskInfo = taskInfo;
+    }
+
     public Task() {
     }
 
