@@ -1,29 +1,28 @@
-package exercices.TpTodolist.Models;
+package entity.manyToMany;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "users")
-public class User {
+public class Tag {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Task> UserTasks = new ArrayList<>();
 
-    public User() {
+    private String name;
+
+    @ManyToMany(mappedBy = "tagList")
+    private List<Post> posts = new ArrayList<>();
+
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -34,20 +33,19 @@ public class User {
         this.name = name;
     }
 
-    public List<Task> getUserTasks() {
-        return UserTasks;
+    public List<Post> getPosts() {
+        return posts;
     }
 
-    public void setUserTasks(List<Task> userTasks) {
-        UserTasks = userTasks;
+    public void setPosts(List<Post> posts) {
+        this.posts = posts;
     }
 
     @Override
     public String toString() {
-        return "User{" +
+        return "Tag{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", UserTasks=" + UserTasks +
                 '}';
     }
 }

@@ -3,6 +3,7 @@ package exercices.TpTodolist.Utils;
 import exercices.TpTodolist.Models.Task;
 import exercices.TpTodolist.Models.TaskInfo;
 import exercices.TpTodolist.dao.TaskDAO;
+import exercices.TpTodolist.dao.UserDAO;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -16,9 +17,12 @@ public class ConsoleIHM {
         private static EntityManagerFactory entityManagerFactory;
         private static TaskDAO taskDAO;
 
+        private static UserDAO userDAO;
+
         public static void main() throws SQLException {
             entityManagerFactory = Persistence.createEntityManagerFactory("Todo");
             taskDAO = new TaskDAO(entityManagerFactory);
+            userDAO = new UserDAO(entityManagerFactory);
 
             Scanner scanner = new Scanner(System.in);
 

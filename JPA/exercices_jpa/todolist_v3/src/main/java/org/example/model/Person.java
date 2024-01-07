@@ -1,4 +1,5 @@
-package exercices.TpTodolist.Models;
+package org.example.model;
+
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -6,16 +7,22 @@ import java.util.List;
 
 @Entity
 @Table(name = "users")
-public class User {
+public class Person {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Task> UserTasks = new ArrayList<>();
 
-    public User() {
+    private String name;
+
+    @OneToMany(mappedBy = "person", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Task> tasks = new ArrayList<>();
+
+    public Person() {
+    }
+
+    public Person(String name) {
+        this.name = name;
     }
 
     public Long getId() {
@@ -34,20 +41,20 @@ public class User {
         this.name = name;
     }
 
-    public List<Task> getUserTasks() {
-        return UserTasks;
+    public List<Task> getTasks() {
+        return tasks;
     }
 
-    public void setUserTasks(List<Task> userTasks) {
-        UserTasks = userTasks;
+    public void setTasks(List<Task> tasks) {
+        this.tasks = tasks;
     }
 
     @Override
     public String toString() {
-        return "User{" +
+        return "Person{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", UserTasks=" + UserTasks +
+                ", tasks=" + tasks +
                 '}';
     }
 }

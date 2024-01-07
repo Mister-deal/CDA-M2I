@@ -12,11 +12,10 @@ public class Task {
     private String description;
     private boolean completed;
 
-    @OneToOne(mappedBy = "task", cascade = { CascadeType.ALL, CascadeType.PERSIST})
+    @OneToOne(mappedBy = "task", cascade =  CascadeType.ALL, orphanRemoval = true)
     private TaskInfo taskInfo;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
     private User user;
 
 
