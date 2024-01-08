@@ -1,6 +1,7 @@
-package org.example.dao;
+package exercices.todolist.src.main.java.org.example.dao;
 
-import org.example.model.Category;
+
+import exercices.todolist.src.main.java.org.example.model.Category;
 
 public interface CategoryDAO {
     void addCategory(Category category);

@@ -1,4 +1,4 @@
-package org.example.model;
+package exercices.todolist.src.main.java.org.example.model;
 
 import javax.persistence.*;
 import java.util.ArrayList;

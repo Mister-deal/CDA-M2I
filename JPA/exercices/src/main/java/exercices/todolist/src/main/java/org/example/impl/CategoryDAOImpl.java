@@ -1,8 +1,7 @@
-package org.example.impl;
+package exercices.todolist.src.main.java.org.example.impl;
 
-import org.example.dao.CategoryDAO;
-import org.example.model.Category;
-import org.example.model.Task;
+import exercices.todolist.src.main.java.org.example.dao.CategoryDAO;
+import exercices.todolist.src.main.java.org.example.model.Category;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

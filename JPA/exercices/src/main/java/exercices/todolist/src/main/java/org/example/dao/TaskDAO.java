@@ -1,5 +1,6 @@
 package org.example.dao;
 
+import exercices.todolist.src.main.java.org.example.model.Task;
 import org.example.model.Task;
 
 import java.util.List;

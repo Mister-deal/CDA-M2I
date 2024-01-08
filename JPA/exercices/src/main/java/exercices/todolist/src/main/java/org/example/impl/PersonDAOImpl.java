@@ -1,7 +1,7 @@
-package org.example.impl;
+package exercices.todolist.src.main.java.org.example.impl;
 
+import exercices.todolist.src.main.java.org.example.model.Person;
 import org.example.dao.PersonDAO;
-import org.example.model.Person;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

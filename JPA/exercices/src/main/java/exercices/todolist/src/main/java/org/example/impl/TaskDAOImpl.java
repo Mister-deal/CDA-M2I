@@ -1,8 +1,9 @@
-package org.example.impl;
+package exercices.todolist.src.main.java.org.example.impl;
 
+import exercices.todolist.src.main.java.org.example.model.Person;
+import exercices.todolist.src.main.java.org.example.model.Task;
 import org.example.dao.TaskDAO;
-import org.example.model.Person;
-import org.example.model.Task;
+
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -42,7 +43,7 @@ public class TaskDAOImpl implements TaskDAO {
         EntityTransaction transaction = entityManager.getTransaction();
         transaction.begin();
         Person person = entityManager.find(Person.class,personId);
-        task.setPerson(person);
+        task.(person);
         person.getTasks().add(task);
         entityManager.persist(task);
         transaction.commit();

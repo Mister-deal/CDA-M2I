@@ -1,14 +1,15 @@
-package org.example.controller;
+package exercices.todolist.src.main.java.org.example.controller;
 
+import exercices.TpTodolist.Models.TaskInfo;
+import exercices.todolist.src.main.java.org.example.dao.CategoryDAO;
+import exercices.todolist.src.main.java.org.example.impl.CategoryDAOImpl;
+import exercices.todolist.src.main.java.org.example.impl.PersonDAOImpl;
+import exercices.todolist.src.main.java.org.example.impl.TaskDAOImpl;
+import exercices.todolist.src.main.java.org.example.model.Category;
+import exercices.todolist.src.main.java.org.example.model.Person;
+import exercices.todolist.src.main.java.org.example.model.Task;
 import jdk.jshell.spi.ExecutionControl;
-import org.example.dao.CategoryDAO;
-import org.example.impl.CategoryDAOImpl;
-import org.example.impl.PersonDAOImpl;
-import org.example.impl.TaskDAOImpl;
-import org.example.model.Category;
-import org.example.model.Person;
-import org.example.model.Task;
-import org.example.model.TaskInfo;
+
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -23,7 +24,7 @@ public class ToDoListAppConsole {
     private static TaskDAOImpl taskDAO;
 
     private static PersonDAOImpl personDAO;
-    private static CategoryDAO categoryDAO;
+    private static CategoryDAOImpl categoryDAO;
 
     public static void main() {
         entityManagerFactory = Persistence.createEntityManagerFactory("todolist");

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="81d0efca-35d4-4eff-8191-571344d35cc1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/HIBERNATE.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JPA/exercices/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JPA/exercices/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JPA/exercices/src/main/java/exercices/todolist/src/main/java/org/example/controller/ToDoListAppConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JPA/exercices/src/main/java/exercices/todolist/src/main/java/org/example/controller/ToDoListAppConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JPA/exercices/src/main/java/exercices/todolist/src/main/java/org/example/dao/CategoryDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JPA/exercices/src/main/java/exercices/todolist/src/main/java/org/example/dao/CategoryDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JPA/exercices/src/main/java/exercices/todolist/src/main/java/org/example/dao/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JPA/exercices/src/main/java/exercices/todolist/src/main/java/org/example/dao/PersonDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JPA/exercices/src/main/java/exercices/todolist/src/main/java/org/example/dao/TaskDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JPA/exercices/src/main/java/exercices/todolist/src/main/java/org/example/dao/TaskDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JPA/exercices/src/main/java/exercices/todolist/src/main/java/org/example/impl/CategoryDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JPA/exercices/src/main/java/exercices/todolist/src/main/java/org/example/impl/CategoryDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JPA/exercices/src/main/java/exercices/todolist/src/main/java/org/example/impl/PersonDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JPA/exercices/src/main/java/exercices/todolist/src/main/java/org/example/impl/PersonDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JPA/exercices/src/main/java/exercices/todolist/src/main/java/org/example/impl/TaskDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JPA/exercices/src/main/java/exercices/todolist/src/main/java/org/example/impl/TaskDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JPA/exercices/src/main/java/exercices/todolist/src/main/java/org/example/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JPA/exercices/src/main/java/exercices/todolist/src/main/java/org/example/model/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JPA/exercices/src/main/java/exercices/todolist/src/main/java/org/example/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JPA/exercices/src/main/java/exercices/todolist/src/main/java/org/example/model/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JPA/exercices/src/main/java/exercices/todolist/src/main/java/org/example/model/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JPA/exercices/src/main/java/exercices/todolist/src/main/java/org/example/model/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JPA/exercices/src/main/java/exercices/todolist/src/main/java/org/example/model/TaskInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JPA/exercices/src/main/java/exercices/todolist/src/main/java/org/example/model/TaskInfo.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2agEosLaBun1TXr6HPf9JVkNcMp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Administrateur/Desktop/Dossier exo et cours maxime M2i/CDA-M2I/HIBERNATE",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="81d0efca-35d4-4eff-8191-571344d35cc1" name="Changes" comment="" />
+      <created>1704731999724</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1704731999724</updated>
+      <workItem from="1704732000722" duration="717000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
