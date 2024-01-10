@@ -14,11 +14,13 @@ public class Main {
 
         ProduitService ps = new ProduitService();
         ps.begin();
+        Ihm ihm = new Ihm();
+        ihm.start();
 
         // Exercice 1
 
         // Creation des produits
-
+    /*
         ps.create(new Product("TOSHIBA","zzaa123",new Date("2016/01/08"),6000.0));
         ps.create(new Product("HP","EER678",new Date("2016/02/09"),2000.0));
         ps.create(new Product("SONY","AQWZSX",new Date("2016/09/23"),6000.0));
@@ -31,11 +33,11 @@ public class Main {
         System.out.println(p);
 
         // Supprimer le produit id = 3
-        ps.delete(ps.findById(3));
+        //ps.delete(ps.findById(3));
 
         // Modifier produit id = 1
 
-        p = ps.findById(1);
+        /*p = ps.findById(1);
         if(p != null){
             p.setMarque("HP");
             p.setReference("MMMMPPP");
@@ -78,11 +80,8 @@ public class Main {
         }catch (Exception e){
             System.out.println(e.getMessage());
         }
+       */
 
-        // exercice 3
-
-        System.out.println("##########################");
-        System.out.println("Veuillez entrer une date de recherche");
 
 
 

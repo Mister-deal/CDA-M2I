@@ -4,12 +4,7 @@
         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 
 <hibernate-configuration>
-
     <session-factory>
-        <mapping class="exercice2.models.Product" />
-        <mapping class="exercice2.models.Commentaire" />
-        <mapping class="exercice2.models.Image" />
 
     </session-factory>
-
 </hibernate-configuration>

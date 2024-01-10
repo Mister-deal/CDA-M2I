@@ -2,6 +2,7 @@ package exercice2.models;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "produits")
@@ -18,7 +19,30 @@ public class Product {
     private Double prix;
     private int stock;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "product", orphanRemoval = true)
+    private List<Commentaire> commentaires;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "product", orphanRemoval = true)
+    private List<Image> images;
+
+
     public Product() {
+    }
+
+    public Product(String marque, String reference, Date dateAchat, Double prix, int stock) {
+        this.marque = marque;
+        this.reference = reference;
+        this.dateAchat = dateAchat;
+        this.prix = prix;
+        this.stock = stock;
+    }
+
+    public Product(String marque, String reference, Date dateAchat, Double prix, int stock, List<Image> images) {
+        this.marque = marque;
+        this.reference = reference;
+        this.dateAchat = dateAchat;
+        this.prix = prix;
+        this.stock = stock;
+        this.images = images;
     }
 
     public Product(String marque, String reference, Date dateAchat, Double prix) {
@@ -26,6 +50,16 @@ public class Product {
         this.reference = reference;
         this.dateAchat = dateAchat;
         this.prix = prix;
+    }
+
+    public Product(String marque, String reference, Date dateAchat, Double prix, int stock, List<Commentaire> commentaires, List<Image> images) {
+        this.marque = marque;
+        this.reference = reference;
+        this.dateAchat = dateAchat;
+        this.prix = prix;
+        this.stock = stock;
+        this.commentaires = commentaires;
+        this.images = images;
     }
 
     public long getId() {
