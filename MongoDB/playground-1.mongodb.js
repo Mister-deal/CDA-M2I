@@ -1,17 +1,27 @@
 use("demo");
-//db.products.insertOne({name :"Iphone", price : 1250});
+//db.products.insertOne({name:"Samsung", price : 1000});
+//db.products.find();
 //db.createCollection("notes");
-//db.notes.insertMany({matiere: "java", date: new Date(2015/5/21), note: 15});
+//db.notes.insertOne({matiere: "Java", date: new Date(2015/5/12), note: 15});
 //db.notes.find();
+//db.products.find(); 
 
-//crud
-//insertion ou creation
+// Crud
+// Insertion ou creation : 
 
-// db.products.insertOne({nom: "table", dimension: 15*15*30*30, poids: 100, prix: 50});
-// db.products.insertOne({nom: "table", dimension: 15*15*30*30, poids: 100, prix: 55});
-// db.products.insertMany([{nom: "table", dimension: 15*15*30*30, poids: 100, prix: 35},{nom: "table-basse", dimension: 15*15*30*30, poids: 50, prix: 25},{nom: "armoire", dimension: 15*15*30*30, poids: 100, couleur: ["rouge", "noir", "beige"], prix: 35}]);
-
-// db.products.insertOne({
-//     _id: 2500, name: "Avion bi-moteur", carburant: "kerosène"
+//db.products.insertOne({nom:"Table", dimension: 15, poids: 500, prix: 50});
+//db.products.insertMany([{nom:"Table-basse", dimension: 15, poids: 500, prix: 50},{nom:"Chaise", dimension: 45, poids: 400, prix: 150},{nom:"Armoire", hauteur: 200 , couleurs: ["bleu", "rouge", "noire"], prix: 250}]);
+//db.products.find(); 
+// db.products.insertOne(
+//     {
+//     nom:"Voiture",
+//      marque: "Renault", 
+//      conducteurs: 
+//      [
+//         {user: "Alice", age: 15},
+//         {user: "Nassim", age: 15}
+//     ]
 // });
-db.products.find();
+
+//db.products.insertOne({_id: 2500, name:"Avion",carburant: "essence"});
+//db.products.find(); 
