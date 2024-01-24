@@ -1,9 +1,6 @@
 package com.example.exo.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -20,6 +17,7 @@ public class Product {
 
     private double price;
 
+    @Temporal(TemporalType.DATE)
     private Date date;
 
     public Product() {
@@ -70,5 +68,16 @@ public class Product {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", stock=" + stock +
+                ", price=" + price +
+                ", date=" + date +
+                '}';
     }
 }

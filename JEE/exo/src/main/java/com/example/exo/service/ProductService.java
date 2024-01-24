@@ -4,6 +4,7 @@ import com.example.exo.Dao.BaseDAO;
 import com.example.exo.models.Product;
 import org.hibernate.query.Query;
 
+import java.util.Date;
 import java.util.List;
 
 public class ProductService extends BaseService implements BaseDAO<Product> {
@@ -32,6 +33,26 @@ public class ProductService extends BaseService implements BaseDAO<Product> {
     }
 
     @Override
+    public boolean create(Product p) {
+        session = sessionFactory.openSession();
+        session.beginTransaction();
+        session.save(p);
+        session.getTransaction().commit();
+        session.close();
+        return true;
+    }
+
+    @Override
+    public boolean update(Product p) {
+        session = sessionFactory.openSession();
+        session.beginTransaction();
+        session.update(p);
+        session.getTransaction().commit();
+        session.close();
+        return true;
+    }
+
+    @Override
     public boolean delete(Product p) {
         session = sessionFactory.openSession();
         session.beginTransaction();
@@ -51,5 +72,18 @@ public class ProductService extends BaseService implements BaseDAO<Product> {
             return productList;
         }
         throw new Exception("erreur valeur");
+    }
+
+    public List<Product> filterByDate(Date min, Date max) throws Exception{
+        if(min.before(max)){
+            session = sessionFactory.openSession();
+            Query<Product> produitQuery = session.createQuery("from Product where date >= :min and date <= :max ");
+            produitQuery.setParameter("min",min);
+            produitQuery.setParameter("max",max);
+            List<Product> produitList = produitQuery.list();
+            session.close();
+            return produitList;
+        }
+        throw new Exception("erreur date");
     }
 }

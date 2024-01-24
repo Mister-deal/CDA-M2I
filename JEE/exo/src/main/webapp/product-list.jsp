@@ -10,49 +10,48 @@
 <html>
 <head>
     <title>product</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <jsp:include page="includes/head.jsp" />
 </head>
 <body>
-<h1>List of products :</h1>
-<c:forEach items="${products}" var="product">
-
-    <div>
-        Id: ${product.getId()}
-        Name: ${product.getName()}
-        Stock: ${product.getStock()}
-        Price: ${product.getPrice()}
-        Date: ${product.getDate()}
+<jsp:include page="includes/header.jsp"/>
+<div class="container mt-4">
+    <center>
+        <h2>Liste des produits </h2>
+    </center>
+    <div class="m-4">
+        <a href="new" class="btn btn-success text-start">Add Product </a>
     </div>
 
-    <table class="table">
-        <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Stock</th>
-            <th scope="col">Price</th>
-            <th scope="col">Date</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>${product.getName()}</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>${product.getStock()}</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>${product.getPrice()}</td>
-        </tr>
-        <tr>
-            <th scope="row">4</th>
-            <td>${product.getDate()}</td>
-        </tr>
-        </tbody>
-    </table>
-</c:forEach>
+
+    <center>
+        <table border="1" cellpadding="5" class="table table-dark text-center" >
+            <tr>
+                <th>Marque</th>
+                <th>Reference</th>
+                <th>Prix</th>
+                <th>Stock</th>
+                <th>Date achat</th>
+                <th >Actions</th>
+            </tr>
+            <c:if test="${products != null}">
+                <c:forEach items="${products}" var="product">
+                    <tr>
+                        <td>${product.getName()}</td>
+                        <td>${product.getPrice()} €</td>
+                        <td>${product.getStock()}</td>
+                        <td>${product.getDate()}</td>
+                        <td>
+                            <a href="edit?id=${product.getId()}" class="btn btn-info">Edit</a>
+                            <a href="delete?id=${product.getId()}" class="btn btn-danger">Delete</a>
+                            <a href="details?id=${product.getId()}" class="btn btn-primary">Detail</a>
+                        </td>
+                    </tr>
+                </c:forEach>
+            </c:if>
+        </table>
+    </center>
+</div>
+
+
 </body>
 </html>
