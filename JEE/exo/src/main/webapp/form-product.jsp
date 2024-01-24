@@ -20,11 +20,11 @@
         <h2>Add product </h2>
     </center>
     <div>
-        <form action="insert" method="post">
+        <form action="insert" method="post" enctype="multipart/form-data">
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="inputEmail4">Brand</label>
-                    <input type="text" class="form-control" id="inputEmail4" name="marque">
+                    <label for="name">name</label>
+                    <input type="text" class="form-control" id="name" name="name">
                 </div>
             </div>
             <div class="form-row">
@@ -41,7 +41,13 @@
                     <input type="date" class="form-control" id="date" placeholder="50" name="date">
                 </div>
             </div>
+            <div>
+                <label for="image">img url</label>
+                <input type="file" class="form-control" id="image" name="image"/>
+            </div>
+
             <button type="submit" class="btn btn-primary">Validation</button>
+
         </form>
     </div>
 </div>

@@ -26,12 +26,12 @@
     <center>
         <table border="1" cellpadding="5" class="table table-dark text-center" >
             <tr>
-                <th>Marque</th>
-                <th>Reference</th>
+                <th>Nom</th>
                 <th>Prix</th>
                 <th>Stock</th>
                 <th>Date achat</th>
                 <th >Actions</th>
+                <th>img</th>
             </tr>
             <c:if test="${products != null}">
                 <c:forEach items="${products}" var="product">
@@ -44,6 +44,9 @@
                             <a href="edit?id=${product.getId()}" class="btn btn-info">Edit</a>
                             <a href="delete?id=${product.getId()}" class="btn btn-danger">Delete</a>
                             <a href="details?id=${product.getId()}" class="btn btn-primary">Detail</a>
+                        </td>
+                        <td>
+                            <img width="50px" height="50px" src="images/${product.getUrlImg()}" alt="img product">
                         </td>
                     </tr>
                 </c:forEach>

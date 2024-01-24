@@ -20,7 +20,29 @@ public class Product {
     @Temporal(TemporalType.DATE)
     private Date date;
 
+    private String urlImg;
+
+    public String getUrlImg() {
+        return urlImg;
+    }
+
+    public void setUrlImg(String urlImg) {
+        this.urlImg = urlImg;
+    }
+
+    public Product(String name, int stock, double price, Date date, String urlImg) {
+        this.name = name;
+        this.stock = stock;
+        this.price = price;
+        this.date = date;
+        this.urlImg = urlImg;
+    }
+
     public Product() {
+    }
+
+    public Product(String urlImg) {
+        this.urlImg = urlImg;
     }
 
     public Product(String name, int stock, double price, Date date) {
@@ -78,6 +100,7 @@ public class Product {
                 ", stock=" + stock +
                 ", price=" + price +
                 ", date=" + date +
+                ", urlImg='" + urlImg + '\'' +
                 '}';
     }
 }

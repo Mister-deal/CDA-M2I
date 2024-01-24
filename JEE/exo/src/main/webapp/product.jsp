@@ -13,7 +13,7 @@
         <div class="card" style="width: 18rem;">
             <img src="" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Marque : ${product.getName()}</h5>
+                <h5 class="card-title">Nom : ${product.getName()}</h5>
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">${product.getPrice()} €</li>
