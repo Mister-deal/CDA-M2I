@@ -16,7 +16,7 @@ public class PatientService extends BaseService implements DAO<Patient> {
     public boolean create(Patient p) {
         session = sessionFactory.openSession();
         session.beginTransaction();
-        session.save(p);
+        session.saveOrUpdate(p);
         session.getTransaction().commit();
         session.close();
         return true;

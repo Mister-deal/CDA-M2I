@@ -19,14 +19,14 @@ public class Patient {
     private Date dateNaissance;
     @Lob
     @Basic(fetch = FetchType.LAZY)
-    private Byte[] photo;
+    private byte[] photo;
     @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL)
     private List<Consultation> consultations;
 
     public Patient() {
     }
 
-    public Patient(String nom, String prenom, Date dateNaissance, Byte[] photo) {
+    public Patient(String nom, String prenom, Date dateNaissance, byte[] photo) {
         this.nom = nom;
         this.prenom = prenom;
         this.dateNaissance = dateNaissance;
@@ -57,11 +57,11 @@ public class Patient {
         this.dateNaissance = dateNaissance;
     }
 
-    public Byte[] getPhoto() {
+    public byte[] getPhoto() {
         return photo;
     }
 
-    public void setPhoto(Byte[] photo) {
+    public void setPhoto(byte[] photo) {
         this.photo = photo;
     }
 

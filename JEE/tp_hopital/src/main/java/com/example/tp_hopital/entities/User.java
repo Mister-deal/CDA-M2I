@@ -10,7 +10,7 @@ public class User {
     private Long id;
 
     private String email;
-
+    @Column(name = "nomUtilisateur")
     private String nom;
 
     private String mdp;
