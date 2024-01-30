@@ -1,7 +1,9 @@
 package com.example.tp_hopital.service;
 
 import com.example.tp_hopital.dao.DAO;
+import com.example.tp_hopital.entities.Patient;
 import com.example.tp_hopital.entities.Prescription;
+import org.hibernate.query.Query;
 
 import java.util.List;
 
@@ -13,26 +15,50 @@ public class PrescriptionService extends BaseService implements DAO<Prescription
 
     @Override
     public boolean create(Prescription p) {
-        return false;
+        session = sessionFactory.openSession();
+        session.beginTransaction();
+        session.saveOrUpdate(p);
+        session.getTransaction().commit();
+        session.close();
+        return true;
     }
 
     @Override
     public boolean update(Prescription p) {
-        return false;
+        session = sessionFactory.openSession();
+        session.beginTransaction();
+        session.update(p);
+        session.getTransaction().commit();
+        session.close();
+        return true;
     }
 
     @Override
     public boolean delete(Prescription p) {
-        return false;
+        session = sessionFactory.openSession();
+        session.beginTransaction();
+        session.delete(p);
+        session.getTransaction().commit();
+        session.close();
+        return true;
     }
 
     @Override
     public Prescription findById(int id) {
-        return null;
+        Prescription prescription = null;
+        session = sessionFactory.openSession();
+        prescription = (Prescription) session.get(Prescription.class, id);
+        session.close();
+        return prescription;
     }
 
     @Override
     public List<Prescription> findAll() {
-        return null;
+        List<Prescription> prescriptionList = null;
+        session = sessionFactory.openSession();
+        Query<Prescription> prescriptionQuery = session.createQuery("from Prescription ");
+        prescriptionList = prescriptionQuery.list();
+        session.close();
+        return prescriptionList;
     }
 }
