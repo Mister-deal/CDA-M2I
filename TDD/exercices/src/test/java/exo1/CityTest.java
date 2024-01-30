@@ -1,5 +1,5 @@
 package exo1;
-import org.example.exo4to6.NotFoundException;
+import org.example.exception.NotFoundException;
 import org.example.exo4to6.SearchCity;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

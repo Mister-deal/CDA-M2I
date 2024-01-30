@@ -1,4 +1,4 @@
 package org.example.exception;
 
-public class QualityException extends Exception{
+public class QualityException extends RuntimeException{
 }

@@ -1,5 +1,7 @@
 package org.example.exo4to6;
 
+import org.example.exception.NotFoundException;
+
 import java.util.ArrayList;
 import java.util.List;
 
