@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a406815-4cda-438b-a165-4cb1c482e4e7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TDD/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TDD/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="73d282b9-63e9-4e36-b3b6-ff3de5a4af49" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,12 +10,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
-}</component>
-  <component name="ProjectId" id="2Z89QVEFR4AupqNC6L5VwVFRZ8G" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2bnv5DaIKHDn2S2jBCeunmIRWXq" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -27,33 +26,23 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/max-9/OneDrive/Bureau/cours et exercices CDA/CDA-M2I/JEE",
-    "nodejs_package_manager_path": "npm",
+    "last_opened_file_path": "C:/Users/max-9/OneDrive/Bureau/cours et exercices CDA/CDA-M2I/TDD",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7a406815-4cda-438b-a165-4cb1c482e4e7" name="Changes" comment="" />
-      <created>1701792822345</created>
+      <changelist id="73d282b9-63e9-4e36-b3b6-ff3de5a4af49" name="Changes" comment="" />
+      <created>1706863471639</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1701792822345</updated>
-      <workItem from="1701792823339" duration="11000" />
-      <workItem from="1706863427740" duration="176000" />
+      <updated>1706863471639</updated>
+      <workItem from="1706863472668" duration="34000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/Exercice Union type/Ts/main.js" />
-        <option value="$PROJECT_DIR$/filter_recipes/assets/ts/data/recipeInterface.js" />
-        <option value="$PROJECT_DIR$/filter_recipes/assets/ts/data/recipes.js" />
-        <option value="$PROJECT_DIR$/filter_recipes/assets/ts/data/main.js" />
-      </list>
-    </option>
   </component>
 </project>
