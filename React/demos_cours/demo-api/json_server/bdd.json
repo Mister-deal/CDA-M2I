@@ -1,0 +1,21 @@
+{
+  "personnes": [
+    {
+      "nom": "Delacroix",
+      "prenom": "pauline",
+      "id": 2
+    }
+  ],
+  "truc": [
+    {
+      "nom": "tutu",
+      "prenom": "titi",
+      "id": 1
+    },
+    {
+      "id": 42,
+      "nom": "tutu",
+      "prenom": "titi"
+    }
+  ]
+}
