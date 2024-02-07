@@ -29,10 +29,14 @@ public class Book {
         this.author = author;
     }
 
-    private Book(Builder builder) {
+    public Book(Builder builder) {
         this.setId(builder.id);
         this.setAuthor(builder.author);
         this.setTitle(builder.title);
+    }
+
+    public Book() {
+
     }
 
     public static class Builder {
