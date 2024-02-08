@@ -3,15 +3,19 @@ package org.example.service;
 import org.example.entity.Reservation;
 import org.example.entity.Room;
 import org.example.port.ReservationRepository;
+import org.example.port.RoomRepository;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.List;
 
 public class ReservationService {
     private final ReservationRepository reservationRepository;
+    private final RoomRepository roomRepository;
 
-    public ReservationService(ReservationRepository reservationRepository){
+    public ReservationService(ReservationRepository reservationRepository, RoomRepository roomRepository){
         this.reservationRepository = reservationRepository;
+        this.roomRepository = roomRepository;
     }
 
     public Reservation createReservation(Room room, LocalDate startDate, LocalTime startTime, LocalDate endDate, LocalTime endTime){
@@ -34,7 +38,7 @@ public class ReservationService {
         reservationRepository.delete(reservation);
     }
 
-    public Reservation findReservationByRoomId(Long roomId){
-        return reservationRepository.findByRoom(roomId);
+    public List<Reservation> findAll(){
+        return reservationRepository.findAll();
     }
 }

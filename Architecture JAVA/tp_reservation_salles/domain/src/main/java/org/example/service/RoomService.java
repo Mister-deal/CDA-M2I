@@ -26,4 +26,11 @@ public class RoomService {
         roomRepository.delete(room);
     }
 
+    public void updateRoom(Room room){
+        if (roomRepository.findById(room.getId()) == null){
+            throw new RuntimeException("Room not found");
+        }
+        roomRepository.update(room);
+    }
+
 }

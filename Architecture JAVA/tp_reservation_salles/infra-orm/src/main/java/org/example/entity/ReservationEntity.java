@@ -16,13 +16,15 @@ public class ReservationEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Room room;
+    @ManyToOne
+    @JoinColumn(name = "room_id")
+    private RoomEntity roomEntity;
     private LocalDate startDate;
     private LocalTime startTime;
     private LocalDate endDate;
     private LocalTime endTime;
 
-    public Reservation toResevation(){
+    public Reservation toReservation(){
         return new Reservation.Builder()
                 .startDate(startDate)
                 .startTime(startTime)
