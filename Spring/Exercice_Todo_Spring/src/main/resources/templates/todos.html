@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Details Todos</h1>
+<hr>
+<p>name :  <span th:text="${name}"></span></p>
+<p>description :  <span th:text="${description}"></span></p>
+<p>done :  <span th:text="${done}"></span></p>
+
+
+<ul>
+    <li th:each="t: ${todos}"><span th:text="${t}"></span> </li>
+</ul>
+
+<ul>
+    <li th:each="t: ${todos2}"><span th:text="${t}"></span> </li>
+</ul>
+
+<ul>
+    <li th:each="t: ${todos3}"><span th:text="${t}"></span> </li>
+</ul>
+
+</body>
+</html>
