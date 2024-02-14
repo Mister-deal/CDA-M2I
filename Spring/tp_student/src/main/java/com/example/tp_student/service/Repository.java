@@ -12,4 +12,5 @@ public interface Repository {
      public List<Student> getAllStudents();
      public Student getStudentByName(String name);
 
+    List<Student> searchStudent(String search);
 }
