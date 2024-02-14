@@ -3,19 +3,33 @@ package com.example.exercice_student.controller;
 import com.example.exercice_student.model.Student;
 import com.example.exercice_student.service.IStudentService;
 import lombok.AllArgsConstructor;
+
+import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 
 @Controller
-@AllArgsConstructor
 public class StudentController {
 
    private final IStudentService studentService;
 
+    @Value("${academy.name}")
+    private  String academyName;
+
+    @Value("${academy.contact}")
+    private String academyContact;
+
+    public StudentController(IStudentService studentService) {
+        this.studentService = studentService;
+    }
+
     @GetMapping  // http://localhost:8080
-    public String home(){
+    public String home(Model model){
+        model.addAttribute("name",academyName);
+        model.addAttribute("contact",academyContact);
         return "home";
     }
 
@@ -48,6 +62,30 @@ public class StudentController {
         return "redirect:/students";
 
     }
+    @GetMapping("/formulaire")
+    public String formUpdateStudent(Long id, Model model){
+        model.addAttribute("student", studentService.getStudentById(id));
+        return "form";
+    }
+
+    @PostMapping("/student/{id}")
+    public String UpdateStudent(@ModelAttribute("student") Student student){
+        studentService.updateStudent(student);
+        return "redirect:/students";
+    }
+
+    @GetMapping("/formulaire")
+    public String formDeleteStudent(Long id, Model model){
+        model.addAttribute("student", studentService.getStudentById(id));
+        return "form";
+    }
+
+    @PostMapping("/student/{id}")
+    public String deleteStudent(@ModelAttribute("student") Student student){
+        studentService.deleteStudent(student);
+        return "redirect:/students";
+    }
+
 
 
 }

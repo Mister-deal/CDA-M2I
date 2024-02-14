@@ -8,6 +8,9 @@ public interface IStudentService {
 
     Student createStudent(Student student);
 
+    Student updateStudent(Student student);
+
+    Student deleteStudent(Student student);
     Student getStudentById(Long id);
 
     List<Student> getAllStudents();
