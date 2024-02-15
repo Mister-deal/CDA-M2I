@@ -62,27 +62,24 @@ public class StudentController {
         return "redirect:/students";
 
     }
-    @GetMapping("/formulaire")
-    public String formUpdateStudent(Long id, Model model){
+    @GetMapping("/update/{id}")
+    public String formUpdateStudent(@PathVariable Long id, Model model){
         model.addAttribute("student", studentService.getStudentById(id));
-        return "form";
+        return "updateForm";
     }
 
-    @PostMapping("/student/{id}")
-    public String UpdateStudent(@ModelAttribute("student") Student student){
+    @PutMapping("/update/{id}")
+    public String UpdateStudent(@PathVariable Long id, @ModelAttribute("student") Student student){
+        student.setId(id);
         studentService.updateStudent(student);
         return "redirect:/students";
     }
 
-    @GetMapping("/formulaire")
-    public String formDeleteStudent(Long id, Model model){
-        model.addAttribute("student", studentService.getStudentById(id));
-        return "form";
-    }
 
-    @PostMapping("/student/{id}")
-    public String deleteStudent(@ModelAttribute("student") Student student){
-        studentService.deleteStudent(student);
+    @PostMapping("/delete/{id}")
+    public String deleteStudent(@PathVariable Long id){
+        Student studentDelete = studentService.getStudentById(id);
+        studentService.deleteStudent(studentDelete);
         return "redirect:/students";
     }
 
