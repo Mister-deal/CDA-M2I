@@ -1,12 +1,12 @@
 package com.example.tb_blog.controller;
 
 
+import com.example.tb_blog.dto.PostDTO;
 import com.example.tb_blog.model.Comment;
 import com.example.tb_blog.model.Post;
 import com.example.tb_blog.service.BlogServiceImpl;
 import com.example.tb_blog.service.CommentService;
 import com.example.tb_blog.service.PostService;
-import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,13 +28,13 @@ public class BlogController {
     private final BlogServiceImpl service;
     @GetMapping
     public String home(Model model){
-        model.addAttribute("posts",service.getAllPost());
+        model.addAttribute("posts", postService.listPosts());
         return "home";
     }
 
     @GetMapping("/post/{id}")
     public String postDetail(@PathVariable UUID id,Model model){
-        Post post=service.getPost(id);
+        PostDTO post=postService.getPost(id);
         if(post==null)
             return "redirect:/";
         model.addAttribute("post",post);
@@ -48,9 +48,9 @@ public class BlogController {
     }
 
     @PostMapping("/post/add")
-    public String postPost(@Valid @ModelAttribute("post") Post post, BindingResult result){
+    public String postPost( @ModelAttribute("post") PostDTO post, BindingResult result){
         if(!result.hasErrors()){
-            service.addPost(post);
+            postService.addPost(post);
             return "redirect:/";
         }
         return "post/form";
@@ -58,29 +58,31 @@ public class BlogController {
 
     @GetMapping("/post/edit/{id}")
     public String postEdit(@PathVariable UUID id,Model model){
-        Post post=service.getPost(id);
+        PostDTO post=postService.getPost(id);
         if(post==null)
             return "redirect:/";
         model.addAttribute("post",post);
         return "post/form";
     }
-
+    /*
     @PostMapping("/post/edit/{id}")
-    public String postEditPost(@Valid @ModelAttribute("post") Post post,BindingResult result){
+    public String postEditPost(@ModelAttribute("post") PostDTO post,BindingResult result){
         if(!result.hasErrors()){
-            service.editPost(post.getId(),post);
+            postService.updatePost(post, post.getId() );
             return "redirect:/";
         }
         return "post/form";
     }
-
+     */
+    /*
     @GetMapping("post/{id}/comment")
     public String addComment(@PathVariable UUID id,Model model){
-        if(service.getPost(id)==null)
+        if(postService.getPost(id)==null)
             return "redirect:/";
         Comment comment=new Comment();
-        comment.setPost(service.getPost(id));
+        comment.setPost();
         model.addAttribute(comment);
         return "comment/form";
     }
+     */
 }

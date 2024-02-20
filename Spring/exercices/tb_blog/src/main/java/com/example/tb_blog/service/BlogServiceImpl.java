@@ -11,7 +11,7 @@ import java.util.UUID;
 public class BlogServiceImpl {
 
 
-    @Override
+    /*
     public boolean addComment(Post post, Comment comment) {
         if(post==null || comment.getId()!=null)
             return false;
@@ -100,4 +100,6 @@ public class BlogServiceImpl {
         }
         return null;
     }
+
+     */
 }
