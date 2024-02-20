@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
-public class BlogServiceImpl implements PostService,CommentService{
+public class BlogServiceImpl {
 
 
     @Override

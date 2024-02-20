@@ -4,6 +4,8 @@ package com.example.tb_blog.controller;
 import com.example.tb_blog.model.Comment;
 import com.example.tb_blog.model.Post;
 import com.example.tb_blog.service.BlogServiceImpl;
+import com.example.tb_blog.service.CommentService;
+import com.example.tb_blog.service.PostService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -19,8 +21,11 @@ import java.util.UUID;
 @Controller
 @AllArgsConstructor
 public class BlogController {
-    private final BlogServiceImpl service;
+    private final PostService postService;
 
+    private final CommentService commentService;
+
+    private final BlogServiceImpl service;
     @GetMapping
     public String home(Model model){
         model.addAttribute("posts",service.getAllPost());
