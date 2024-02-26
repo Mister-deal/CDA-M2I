@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Ajouter une Recette</title>
+</head>
+<body>
+<h2>Ajouter une Recette</h2>
+<form th:action="@{/recipes/add}" th:object="${recipe}" method="post">
+    <input type="text" th:field="*{name}" placeholder="Nom de la recette"/>
+    <textarea th:field="*{ingredients}" placeholder="Ingrédients"></textarea>
+    <textarea th:field="*{instructions}" placeholder="Instructions"></textarea>
+    <button type="submit">Soumettre</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,103 @@
+{
+  "info": {
+    "_postman_id": "1",
+    "name": "API Series et Suiveurs - Tests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Ajouter une série",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Breaking Bad\",\n    \"genre\": \"Drame\",\n    \"status\": \"TERMINE\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/series",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "series"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Ajouter une saison à une série",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"number\": 1,\n    \"series\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/seasons",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "seasons"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Inscrire un suiveur à une série",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"suiveur@example.com\",\n    \"followedSeries\": [1]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/followers",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "followers"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Lister les séries suivies par un suiveur",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/followers/1/followedSeries",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "followers",
+            "1",
+            "followedSeries"
+          ]
+        }
+      }
+    }
+  ],
+  "protocolProfileBehavior": {}
+}
