@@ -1,0 +1,17 @@
+# Image de base
+FROM alpine
+
+LABEL version="0.1"
+
+# Définir un répertoire de travail
+WORKDIR /root
+
+# Copie le repertoire courant vers le workdir
+COPY . .
+
+# Lancement d'une commande
+RUN apk update && apk add nano
+
+
+# Définir la commande par défaut
+CMD ["cat","mon_fichier.txt"]
