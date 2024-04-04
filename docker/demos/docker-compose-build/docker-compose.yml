@@ -1,7 +1,10 @@
-version: "3"
+version: '3.8'
 
 services:
   test-build:
     build:
-      context: ./chemin-projet
+      context: ./projet
       dockerfile: Dockerfile
+    ports:
+      - "8080:80" 
+
