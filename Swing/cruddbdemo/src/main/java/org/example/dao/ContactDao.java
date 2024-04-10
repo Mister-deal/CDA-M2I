@@ -17,7 +17,7 @@ public class ContactDao {
     public int addContact(Contact contact) {
         con = ConnectionUtil.getConnection();
         try {
-            ps = con.prepareStatement("INSERT INTO 'contact'('name','number')values(?,?)");
+            ps = con.prepareStatement("INSERT INTO `contact`(`name`,`number`)values(?,?)");
             ps.setString(1, contact.getName());
             ps.setString(2, contact.getNumber());
 

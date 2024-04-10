@@ -48,7 +48,7 @@ public class MainFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 InsertDialog dialog = new InsertDialog();
-                dialog.setDefaultCloseOperation(JDialog.EXIT_ON_CLOSE);
+             //   dialog.setDefaultCloseOperation(JDialog.EXIT_ON_CLOSE);
                 dialog.setLocationRelativeTo(jPanel);
                 dialog.setVisible(true);
             }

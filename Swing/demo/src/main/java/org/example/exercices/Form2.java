@@ -38,7 +38,7 @@ public class Form2 {
         tablePanel = createTablePanel();
 
 
-        JSeparator separator = new JSeparator(JSeparator.HORIZONTAL);
+        separator = new JSeparator(JSeparator.HORIZONTAL);
 
         mainPanel.add(formPanel, BorderLayout.NORTH);
         mainPanel.add(separator, BorderLayout.CENTER);
