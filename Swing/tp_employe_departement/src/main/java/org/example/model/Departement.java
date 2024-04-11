@@ -1,17 +1,24 @@
 package org.example.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import lombok.*;
+
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "departement")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class Departement {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "departement", orphanRemoval = true)
+    private List<Salarie> salarieList;
 
     public void setId(Long id) {
         this.id = id;
