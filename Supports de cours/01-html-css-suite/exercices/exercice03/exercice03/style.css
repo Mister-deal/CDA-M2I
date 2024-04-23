@@ -1,0 +1,88 @@
+@keyframes bubble_rotation_red {
+    0%, 100% {
+        left: calc(50% - 100px);
+        top: 0;
+    }
+
+    33% {
+        left: calc(100% - 200px);
+        top: calc(100% - 200px);
+    }
+
+    66% {
+        left: 0;
+        top: calc(100% - 200px);
+    }
+}
+
+@keyframes bubble_rotation_blue {
+    0%, 100% {
+        left: 0;
+        top: calc(100% - 200px);
+    }
+
+    33% {
+        left: calc(50% - 100px);
+        top: 0;
+    }
+
+    66% {
+        left: calc(100% - 200px);
+        top: calc(100% - 200px);
+    }
+}
+
+@keyframes bubble_rotation_green {
+    0%, 100% {
+        left: calc(100% - 200px);
+        top: calc(100% - 200px);
+    }
+
+    33% {
+        left: 0;
+        top: calc(100% - 200px);
+    }
+
+    66% {
+        left: calc(50% - 100px);
+        top: 0;
+    }
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bubble-container {
+    height: 600px;
+    width: 600px;
+    background-color: gray;
+    position: relative;
+}
+
+.bubble-container > div[class^="bubble-"] {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border-radius: 9999999px;
+}
+
+
+.bubble-red {
+    background-color: red;
+    animation: bubble_rotation_red 3s linear infinite;
+}
+
+.bubble-blue {
+    background-color: blue;
+    animation: bubble_rotation_blue 3s linear infinite;
+}
+
+.bubble-green {
+    background-color: green;
+    animation: bubble_rotation_green 3s linear infinite;
+}

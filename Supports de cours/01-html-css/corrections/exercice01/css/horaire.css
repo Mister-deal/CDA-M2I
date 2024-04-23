@@ -1,0 +1,13 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: 1rem;
+}
+
+table th {
+    background-color: rgb(223, 188, 255);
+}
+
+table td:nth-child(8), td:nth-child(7) {
+    background-color: rgb(255, 188, 188);
+}

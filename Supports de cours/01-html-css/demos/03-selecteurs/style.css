@@ -1,0 +1,73 @@
+/* sélecteur universel */
+* {
+    font-family: sans-serif;
+}
+
+p {
+    font-size: 17px;
+}
+
+/* sélecteur d'id */
+#important {
+    color: red;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* sélecteur de classe */
+.ma-classe {
+    border: 1px solid black;
+}
+
+.rouge {
+    color: red;
+}
+
+.surligne {
+    text-decoration: line-through;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-shadow: 1px 1px 0 red;
+}
+
+/* combinateur */
+li span {
+    color: green;
+    font-weight: bold;
+}
+
+/* sélecteur d'élément fils */
+div > p {
+    text-transform: uppercase;
+}
+
+/* Sélecteur d'élément voisin */
+div + figure {
+    background-color: aqua;
+}
+
+a:link {
+    color: yellow;
+}
+a:hover {
+    background-color: red;
+}
+
+.questionnaire {
+    color: red;
+}
+
+.questionnaire > li:nth-child(3) {
+    color: green;
+}
+
+/* permet de forcer la propriété */
+/* ol {
+    color: brown !important;
+} */

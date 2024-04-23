@@ -1,0 +1,25 @@
+:root {
+    --box-size: 100px;
+
+}
+
+.box {
+    height: var(--box-size);
+    width: var(--box-size);
+}
+
+#color-1 {
+    background: red;
+}
+
+#color-2 {
+    position: relative;
+    background: green;
+    left: var(--box-size);
+}
+
+#color-3 {
+    position: relative;
+    background: blue;
+    left: calc(2 * var(--box-size));
+}

@@ -1,0 +1,93 @@
+:root {
+    --ue-flag-bg: rgb(23, 23, 86);
+    --ue-text: rgb(143, 143, 18);
+    --ue-text-bright: #e2e24a;
+}
+
+@keyframes rotation_full {
+    from { transform: rotate(0turn); }
+    to { transform: rotate(1turn); }
+}
+
+@keyframes scale_up_120 {
+    from { transform: scale(1); }
+    to { transform: scale(1.2); }
+}
+
+@keyframes color_switch_brighter {
+    from { color: var(--ue-text); }
+    to { color: var(--ue-text-bright); }
+}
+
+html, body {
+    margin: 0;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flag-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 400px;
+    background-color: var(--ue-flag-bg);
+}
+
+.flag-box > span {
+    position: absolute;
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    color: var(--ue-text);
+    animation: scale_up_120 2s linear infinite alternate,
+    color_switch_brighter 2s linear infinite alternate;
+}
+
+.flag-box-container {
+    position: relative;
+    height: 360px;
+    width: 360px;
+    animation: rotation_full 60s linear infinite;
+}
+
+.flag-square {
+    position: absolute;
+    height: 360px;
+    width: 360px;
+}
+
+.flag-square:nth-child(2) { transform: rotate(30deg); }
+.flag-square:nth-child(3) { transform: rotate(60deg); }
+.flag-square:nth-child(4) { transform: rotate(90deg); }
+.flag-square:nth-child(5) { transform: rotate(120deg); }
+.flag-square:nth-child(6) { transform: rotate(150deg); }
+.flag-square:nth-child(7) { transform: rotate(180deg); }
+.flag-square:nth-child(8) { transform: rotate(210deg); }
+.flag-square:nth-child(9) { transform: rotate(240deg); }
+.flag-square:nth-child(10) { transform: rotate(270deg); }
+.flag-square:nth-child(11) { transform: rotate(300deg); }
+.flag-square:nth-child(12) { transform: rotate(330deg); }
+
+.flag-square:nth-child(even) > .flag-star {
+    animation: rotation_full 10s linear infinite;
+}
+
+.flag-square:nth-child(odd) > .flag-star {
+    animation: rotation_full 10s linear infinite reverse;
+}
+
+.flag-star {
+    height: 50px;
+    width: 50px;
+    margin: auto;
+    display: block;
+    filter: invert(83%) sepia(88%) saturate(376%) hue-rotate(360deg) brightness(93%) contrast(89%);
+}

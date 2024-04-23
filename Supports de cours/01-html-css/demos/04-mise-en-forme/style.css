@@ -1,0 +1,92 @@
+/* import d'une police via le css */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+html {
+    font-size: 10px;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    /* taille relative par rapport à l'élément racine (html) */
+    font-size: 3.2rem;
+}
+
+pre {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.6rem;
+}
+
+.font {
+    font-size: 1.6rem;
+}
+
+p {
+    font-size: 2em;
+}
+
+code {
+    font-size: 200%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.color-hexa {
+    color: #FF00F1;
+}
+
+.color-rgb {
+    color: rgb(72, 228, 223);
+}
+
+.color-hsl {
+    color: hsl(100, 40%, 70%);
+    margin: 10px 30px;
+}
+
+#block {
+    font-size: 2rem;
+    display: block;
+    /* margin-top: 1em;
+    margin-left: 1em; */
+    /* haut droite bas gauche */
+    margin: 1rem 0 2rem 30px;
+}
+
+nav {
+    font-size: 2rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    margin: 0 2em;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border: 2px dashed black;
+    padding: 1rem;
+    margin: 2rem 0;
+    overflow: hidden;
+    border-radius: 10px;
+}

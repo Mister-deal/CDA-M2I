@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap');
+
+:root {
+    --main-orange: #e9a018;
+}
+
+html, body {
+    margin: 0;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template: 1fr / 6fr 4fr;
+}
+
+.left-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-part > h1 {
+    color: var(--main-orange);
+    font-family: 'Lobster', cursive;
+    font-size: 4rem;
+}
+
+.left-part > p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    text-indent: 4rem;
+    text-align: justify;
+    width: 60%;
+}
+
+.left-part > button {
+    margin-top: 5vh;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    padding: 1vh 2vw;
+    border-radius: 9999999px;
+    background-color: transparent;
+    border: 0.2rem solid var(--main-orange);
+    color: var(--main-orange);
+    transition-duration: 200ms;
+}
+
+.left-part > button:hover {
+    background-color: var(--main-orange);
+    color: white;
+    border: 0.2rem solid transparent;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.right-part {
+    background-color: red;
+    position: relative;
+}
+
+img[class^="shape-"] {
+    position: absolute;
+    z-index: 1;
+}
+
+.shape-triangle {
+    top: 45%;
+    left: -15%;
+    transform: rotate(15deg) scale(1.8);
+    filter: invert(67%) sepia(88%) saturate(1107%) hue-rotate(349deg) brightness(95%) contrast(92%);
+}
+
+.shape-square {
+    top: 32%;
+    left: 40%;
+    transform: rotate(15deg) scale(0.8);
+    filter: invert(72%) sepia(9%) saturate(2368%) hue-rotate(176deg) brightness(93%) contrast(102%);
+}
+
+.shape-circle {
+    top: 35%;
+    left: 30%;
+    transform: rotate(15deg) scale(0.8);
+    filter: invert(86%) sepia(74%) saturate(297%) hue-rotate(359deg) brightness(93%) contrast(94%);
+}
+
+.right-part > img:last-child {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les balises de base</title>
+</head>
+
+<body>
+    <h1>Titre h1</h1>
+    <p>paragraphe</p>
+
+    <!-- liste non ordonnée -->
+    <ul>
+        <li>faire les courses</li>
+        <li>faire du sport</li>
+        <li>faire la vaisselle</li>
+    </ul>
+
+    <!-- liste ordonnée -->
+    <ol>
+        <li>Lundi</li>
+        <li>Mardi</li>
+        <li>Mercredi</li>
+        <li>Jeudi</li>
+        <li>Vendredi</li>
+        <li>Samedi</li>
+        <li>Dimanche</li>
+    </ol>
+
+    <!-- horizontal rule -->
+    <hr>
+
+    <p>
+        toto
+        tata
+        titi
+    </p>
+
+    <pre>
+toto    toto
+tata    tata
+titi    titi
+    </pre>
+
+    <p>
+        toto <br>
+        tata <br>
+        titi <br>
+    </p>
+
+    <p><a href="#">mon lien important</a></p>
+    <p> &lt;a href="#"&gt;mon lien important&lt;/a&gt;</p>
+
+    <p>le mot <strong>welcome</strong> veut dire <em>bonjour</em> en anglais</p>
+
+    <!-- div permet de styliser un élément de block -->
+    <div>
+        <!-- span permet de styliser un élément inline -->
+        <p>Ceci est un paragraphe dans une div et ceci est un <span>texte</span> dans un span</p>
+    </div>
+
+    <div>
+        <!-- lien vers une ressource externe -->
+        <a href="https://www.google.fr">google</a>
+    </div>
+
+    <div>
+        <!-- lien vers une autre page de mon site web -->
+        <a href="semantique.html">lien vers sémantique</a>
+    </div>
+
+    <div>
+        <!-- l'attribut target permet de choisir comment s'ouvre le lien (nouvel onglet = _blank) -->
+        <a href="articles\article-01.html" target="_blank">article</a>
+    </div>
+
+    <div><a href="mailto:arthur@utopios.fr">m'envoyer un mail</a></div>
+
+    <h2>Création d'un tableau</h2>
+
+    <!-- tableau -->
+    <table>
+        <!-- entête du tableau -->
+        <thead>
+            <!-- ligne de l'entête -->
+            <tr>
+                <!-- cellule -->
+                <td>prénom</td>
+                <td>nom</td>
+            </tr>
+        </thead>
+        <!-- corps du tableau -->
+        <tbody>
+            <!-- ligne du tableau -->
+            <tr>
+                <!-- cellule -->
+                <td>Arthur</td>
+                <td>Dennetière</td>
+            </tr>
+            <tr>
+                <td>toto</td>
+                <td>tata</td>
+            </tr>
+            <tr>
+                <td>titi</td>
+                <td>tutu</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <figure>
+        <img src="https://picsum.photos/400/200" alt="image aléatoire">
+        <figcaption>Une image aléatoire de lorem picsum</figcaption>
+    </figure>
+
+    <figure>
+        <img src="img/emarge.png" alt="émarge" height="300">
+        <figcaption>Lion origami</figcaption>
+    </figure>
+
+    <audio controls src="sound/lion.mp3"></audio>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/0Ymr-CADVks" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</body>
+
+</html>

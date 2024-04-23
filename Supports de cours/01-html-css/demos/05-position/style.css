@@ -1,0 +1,34 @@
+body {
+    height: 3000px;
+}
+
+.bloc {
+    width: 100px;
+    height: 100px;
+    margin: 10px 0;
+}
+
+#bloc1 {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    background-color: red;
+    z-index: -1;
+}
+
+#bloc2 {
+    position: absolute;
+    background-color: blue;
+    top: 30px;
+    left: 50px;
+}
+
+#bloc3 {
+    background-color: yellow;
+}
+
+#bloc4 {
+    position: sticky;
+    background-color: green;
+    top: 10px;
+}

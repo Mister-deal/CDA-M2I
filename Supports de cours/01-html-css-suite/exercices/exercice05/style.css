@@ -1,0 +1,107 @@
+body, html {
+    margin: 0;
+}
+
+body {
+    background-color: gray;
+}
+
+main {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    background-color: rgb(38, 32, 66);
+    border-radius: 20px;
+    display: grid;
+    padding: 10px;
+}
+
+.modal > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.modal-body {
+    box-sizing: border-box;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: rgb(237, 237, 237);
+    padding: clamp(10px, 3vw, 30px);
+}
+
+.flex-form {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: end;       
+}
+
+.modal-text > h2 {
+    font-size: clamp(1rem, 0.5714rem + 2.1429vw, 4rem);
+}
+
+.modal-text > p {
+    font-size: clamp(0.8rem, 0.6286rem + 0.8571vw, 2rem);
+}
+
+.modal-form {
+    display: flex;
+    justify-content: end;
+}
+
+.modal-form > input {
+    height: clamp(20px, 5vw, 120px);
+    margin-right: clamp(5px, 1.5vw, 15px);
+    padding-left: clamp(5px, 1.5vw, 15px);
+    width: 50%;
+    background-color: transparent;
+    border: 1px grey solid;
+    font-size: clamp(0.8rem, 0.6286rem + 0.8571vw, 2rem);
+}
+
+.modal-form > input::placeholder {
+    font-size: clamp(0.8rem, 0.6286rem + 0.8571vw, 2rem);
+}
+
+.modal-form > button {
+    background-color: yellowgreen;
+    border-radius: clamp(0.625rem, 0.5357rem + 0.4464vw, 1.25rem);
+    font-size: clamp(0.8rem, 0.6286rem + 0.8571vw, 2rem);
+    font-weight: bold;
+}
+
+.modal-form > button:hover {
+    background-color: rgb(187, 240, 80);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .modal {
+        width: min(400px, 80vw);
+        height: min(700px, 120vw);
+        grid-template: 1fr 3fr / 1fr;
+    }
+
+    .modal > img { 
+        border-radius: 20px 20px 0 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .modal {
+        width: min(1800px, 80vw);
+        height: min(600px, 28vw);
+        grid-template: 1fr / 2fr 4fr;
+    }
+
+    .modal > img { 
+        border-radius: 20px 0 0 20px;
+    }
+}
